@@ -1,1 +1,338 @@
+/* ----- Model de caiza alternatiu  ----- */
+* {
+    margin: 0;
+    padding: 0;
+}
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
 
+/* ----- Definició de la font Noto Sans de Google Fonts per tot el lloc web  ----- */
+html {
+  font-family: "Noto Sans", sans-serif;
+  width: 100vw;
+  height: 100vh;
+  box-sizing: border-box;
+}  
+
+/* ----- Custom properties per les variables (amb noms descriptius en comptes de colors) ----- */
+:root {
+    --color-principal: rgb(23 23 23);
+    --color-hover-ellaços-especials-i-boto-enviament: rgb(218 245 9);
+    --color-textos-sobre-fons-negre: rgb(255 255 255);
+    --color-fons-capçalera-taula-tallers: rgb(23 23 23 / 0.1);
+
+    --font-weight-textos-generals: 400;
+    --font-weight-cite-i-capçalera-taula-tallers: 700;
+    --font-weight-descobrir-i-subtitol-index: 900;
+}
+
+/* ----- Redefinició de propietats generals ja definides per HTML5 ----- */
+cite {
+    font-weight: var(--font-weight-cite-i-capçalera-taula-tallers);
+}
+
+
+abbr {
+    cursor: help;
+}
+
+h1 {
+    font-size: 3rem;
+    margin-bottom: 40px;
+}
+
+h2 {
+    font-size: 2.5rem;
+    margin: 25px 0;
+}
+
+h1, h2, h3, h4 {
+    font-weight: var(--font-weight-textos-generals);
+}
+
+figcaption {
+    font-size: 0.85rem;
+}
+
+p {
+    margin: 1rem 0;
+}
+
+/* Incorporació d'imatge de fons amb CSS */
+
+body {
+    margin: 0;
+    padding: 0;
+    font-weight: var(--font-weight-textos-generals);
+    color: var(--color-principal);
+}
+
+body.body-index {
+    background-image: url(../img/home-bg.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: top center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 100vh;
+}
+
+nav li {
+    margin: 2.5px;
+}
+
+header a {
+    text-decoration: none;
+    color: var(--color-textos-sobre-fons-negre);
+    transition: color 0.25s ease;
+}
+
+header a:hover {
+    color: var(--color-hover-ellaços-especials-i-boto-enviament);
+}
+
+header nav ul {
+    gap: 40px;
+}
+
+.header-index {
+    text-align: center;
+    font-size: 0.85rem;
+    padding: 10px 0 90px 0;
+}
+
+.header-index nav ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+}
+
+.header-alternatiu {
+    background-color: var(--color-principal);
+    color: var(--color-textos-sobre-fons-negre);
+    padding: 20px 0 30px 0;
+}
+
+.header-alternatiu-container {
+    width: 100%;
+    max-width: 1140px;
+    margin-right: auto;
+    margin-left: auto;
+    padding-right: 1rem;
+    padding-left: 1rem;
+    text-align: left;
+}
+
+.header-alternatiu a {
+    color: var(--color-blanc);
+    font-size: 2rem;
+    font-weight: var(--font-weight-descobrir-i-subtitol-index);
+    text-decoration: none;
+    cursor: pointer;
+}
+
+/* Quadrat decoratiu de color verd on es trobi l'usuari */
+.header-alternatiu nav a.active::after {
+    content: "";
+    width: 6px;
+    height: 6px;
+    background-color: var(--color-hover-ellaços-especials-i-boto-enviament);
+    display: block;
+    margin: 10px 0 0 0;
+}
+
+/* Incorporada amb CSS, mostra a la seva esquerra la imatge decorativa isologo-white.svg. */
+.header-alternatiu-container a.logo::before {
+    content: "";
+    display: inline-block;
+    width: 25px;
+    height: 25px;
+    margin-right: 10px;
+    background-image: url("../img/isologo-white.svg");
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.header-alternatiu-container a img {
+    filter: brightness(0) invert(1);
+    height: 25px;
+    width: auto;
+    margin-right: 7.5px;
+}
+
+.header-alternatiu-container nav ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+}
+
+.header-alternatiu-container nav ul li a {
+    font-size: 1rem;
+    font-weight: var(--font-weight-textos-generals);
+}
+
+.main-index {
+    text-align: center;
+    margin-bottom: 180px;
+    color: var(--color-textos-sobre-fons-negre);
+}
+
+.main-index .contenidor-logotip {
+    position: relative;
+    display: inline-block;
+}
+
+.main-index .contenidor-logotip h1 {
+    position: relative;
+    font-size: 6rem;
+    padding-top: 50px;
+    line-height: 1;
+    font-weight: var(--font-weight-descobrir-i-subtitol-index);
+}
+
+/* "El nom del lloc web mostra en la seva part superior la imatge decorativa isologo-white.svg que ha d’incorporar-se mitjançant CSS." */
+.main-index .contenidor-logotip h1::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 50px;
+    height: 50px;
+    background-image: url("../img/isologo-white.svg");
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.main-index h2 {
+    font-weight: var(--font-weight-descobrir-i-subtitol-index);
+    font-size: 1.7rem;
+}
+
+footer {
+    width: 100%;
+    text-align: center;
+    font-size: 0.5rem;
+}
+
+footer a {
+    color: var(--color-textos-sobre-fons-negre);
+    text-decoration: none;
+    cursor: pointer;
+}
+
+footer a:hover { 
+   color: var(--color-hover-ellaços-especials-i-boto-enviament);
+}
+
+.footer-index {
+    color: var(--color-textos-sobre-fons-negre);    
+}
+
+.footer-links {
+    display: inline;
+}
+
+.footer-links a::after {
+    content: " · ";
+    margin: 0 7.5px;
+}
+
+/* Eliminar el tercer " · " */
+.footer-links a:last-child::after {
+    content: "";
+}
+
+.footer-alternatiu {
+    background-color: var(--color-principal);
+    color: var(--color-textos-sobre-fons-negre);
+}
+
+.footer-alternatiu-container {
+    width: 100%;
+    max-width: 1140px;
+    margin-right: auto;
+    margin-left: auto;
+    padding: 20px 1rem 30px 1rem;
+    text-align: left;
+}
+
+.container-gran {
+    width: 100%;
+    max-width: 1140px;
+    margin-right: auto;
+    margin-left: auto;
+    padding-right: 1rem;
+    padding-left: 1rem;
+}
+
+.container-petit {
+width: 100%;
+max-width: 850px;
+margin-right: auto;
+margin-left: auto;
+padding-right: 1rem;
+padding-left: 1rem;
+}
+
+.container-gran , .container-petit  {
+    font-size: 1.1rem;
+    line-height: 1.5;
+}
+
+a.enllaç-dins-text {
+    color: var(--color-principal);
+    text-decoration: underline dotted;
+    text-underline-offset: 5px;
+    transition: color 0.25s ease;
+}
+
+ a.enllaç-dins-text:hover {
+    text-decoration: underline solid;
+}
+
+/* ----- ----- */
+.article-header {
+    display: flex;
+    gap: 0.25rem;
+    margin: 40px 0 20px 0;
+}
+
+.article-del-mes {
+    background-color: var(--color-principal);
+    color: var(--color-textos-sobre-fons-negre);
+    padding: 0rem 0.5rem;
+}
+
+.introduccio {
+    font-size: 1.5rem;
+}
+
+figure img {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+}
+
+figcaption {
+    text-align: center;
+}
+
+.llista-categories-pare {
+    list-style-type: square;
+    padding-left: 35px;
+    gap: 50px;
+}
+
+.llista-categories-pare li {
+    margin-bottom: 13px;
+}
