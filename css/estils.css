@@ -41,7 +41,11 @@ abbr {
 
 h1 {
     font-size: 3rem;
-    margin-bottom: 40px;
+    margin: 40px 0 35px 0;
+}
+
+h1.h1-article-del-mes {
+    margin-top: 0;
 }
 
 h2 {
@@ -51,6 +55,7 @@ h2 {
 
 h3 {
     font-size: 1.75rem;
+    margin-bottom: 15px;
 }
 
 h4 {
@@ -106,7 +111,7 @@ body {
 
 /* Incorporació d'imatge de fons amb CSS */
 .container-gran.body-index {
-    background-image: url(../img/home-bg.jpg);
+    background-image: url("../img/home-bg.jpg");
     background-repeat: no-repeat;
     background-size: cover;
     background-position: top center;
@@ -156,7 +161,6 @@ header a:hover {
 }
 
 .container-gran.header-alternatiu-container a.logo {
-    color: var(--color-blanc);
     font-size: 2rem;
     font-weight: var(--font-weight-descobrir-i-subtitol-index);
     text-decoration: none;
@@ -304,7 +308,7 @@ a.enllaç-dins-text {
 /* ----- ----- */
 .article-header {
     display: flex;
-    margin: 40px 0 20px 0;
+    margin: 40px 0 10px 0;
 }
 
 .article-del-mes {
@@ -343,7 +347,6 @@ figure img {
 
 .video-figure iframe {
     width: 100%;
-    max-width: 857px;
     aspect-ratio: 16 / 9; /* Manté la relació d'aspecte original */
     display: block;
     margin: 0 auto;
@@ -358,4 +361,52 @@ figure img {
 .ultim-paragraf {
     font-size: 0.75rem;
     margin: 50px 0 60px 0;
+}
+
+figure > img,
+figure > iframe {
+    display: block;
+}
+
+/* ----- ----- */
+table {
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 100px;
+    border-collapse: collapse;
+    border: 1px solid var(--color-principal);
+}
+
+th.titol-taula {
+    font-size: 2rem;
+    text-align: center;
+}
+
+th {
+    background-color: var(--color-fons-capçalera-taula-tallers);
+    font-weight: var(--font-weight-cite-i-capçalera-taula-tallers);
+    font-size: 1rem;
+    gap: 0.4rem;
+    padding: 10px 2.5px;
+}
+
+th img {
+    width: 20px;
+    height: 20px;
+    vertical-align: middle;
+    margin-right: 5px;
+}
+
+td {
+    padding: 15px 5px;
+}
+
+th,
+td {
+  border: 1px solid var(--color-principal);
+  text-align: left;
+}
+
+td.footer-taula {
+    font-size: 0.65rem;
 }
