@@ -46,15 +46,27 @@ h1 {
 
 h2 {
     font-size: 2.5rem;
-    margin: 25px 0;
+    margin-bottom: 25px;
 }
+
+h3 {
+    font-size: 1.75rem;
+}
+
+h4 {
+    font-size: 1rem;
+    margin-right: 5px;
+}
+
 
 h1, h2, h3, h4 {
     font-weight: var(--font-weight-textos-generals);
 }
 
 figcaption {
+    text-align: center;
     font-size: 0.85rem;
+    margin-top: 5px;
 }
 
 p {
@@ -93,7 +105,7 @@ body {
 }
 
 /* Incorporació d'imatge de fons amb CSS */
-body.body-index {
+.container-gran.body-index {
     background-image: url(../img/home-bg.jpg);
     background-repeat: no-repeat;
     background-size: cover;
@@ -118,14 +130,10 @@ header a:hover {
     color: var(--color-hover-ellaços-especials-i-boto-enviament);
 }
 
-header nav ul {
-    gap: 40px;
-}
-
 .header-index {
     text-align: center;
-    font-size: 0.85rem;
-    padding: 10px 0 90px 0;
+    padding: 13.5px 0 132px 0;
+    font-size: 1.2rem;
 }
 
 .header-index nav ul {
@@ -134,6 +142,7 @@ header nav ul {
     padding: 0;
     display: flex;
     justify-content: center;
+    gap: 43px;
 }
 
 .header-alternatiu {
@@ -142,26 +151,15 @@ header nav ul {
     padding: 20px 0 30px 0;
 }
 
-.header-alternatiu a {
+.container-gran.header-alternatiu-container {
+    text-align: left;
+}
+
+.container-gran.header-alternatiu-container a.logo {
     color: var(--color-blanc);
     font-size: 2rem;
     font-weight: var(--font-weight-descobrir-i-subtitol-index);
     text-decoration: none;
-    cursor: pointer;
-}
-
-/* Quadrat decoratiu de color verd on es trobi l'usuari */
-.header-alternatiu nav a.active::after {
-    content: "";
-    width: 6px;
-    height: 6px;
-    background-color: var(--color-hover-ellaços-especials-i-boto-enviament);
-    display: block;
-    margin: 10px 0 0 0;
-}
-
-.container-gran.header-alternatiu-container {
-    text-align: left;
 }
 
 /* Incorporada amb CSS, mostra a la seva esquerra la imatge decorativa isologo-white.svg. */
@@ -177,68 +175,71 @@ header nav ul {
     background-position: center;
 }
 
-.container-gran.header-alternatiu-container a img {
-    filter: brightness(0) invert(1);
-    height: 25px;
-    width: auto;
-    margin-right: 7.5px;
+/* Quadrat decoratiu de color verd on es trobi l'usuari */
+.container-gran.header-alternatiu-container nav a.active::after {
+    content: "";
+    width: 8px;
+    height: 8px;
+    background-color: var(--color-hover-ellaços-especials-i-boto-enviament);
+    display: block;
+    margin: 10px 0 0 0;
 }
 
 .container-gran.header-alternatiu-container nav ul {
     list-style-type: none;
     margin: 0;
-    padding: 0;
     display: flex;
+    gap: 35px;
 }
 
 .container-gran.header-alternatiu-container nav ul li a {
-    font-size: 1rem;
     font-weight: var(--font-weight-textos-generals);
 }
 
-.container-gran.index {
+.main-index {
     text-align: center;
-    margin-bottom: 180px;
+    margin-bottom: 277px;
     color: var(--color-textos-sobre-fons-negre);
 }
 
-.container-gran.index .contenidor-logotip {
+.main-index .contenidor-logotip {
     position: relative;
     display: inline-block;
 }
 
-.container-gran.index .contenidor-logotip h1 {
+.main-index .contenidor-logotip h1 {
     position: relative;
-    font-size: 6rem;
-    padding-top: 50px;
+    font-size: 9rem;
+    padding-top: 80px;
+    margin-bottom: 10px;
     line-height: 1;
     font-weight: var(--font-weight-descobrir-i-subtitol-index);
 }
 
 /* "El nom del lloc web mostra en la seva part superior la imatge decorativa isologo-white.svg que ha d’incorporar-se mitjançant CSS." */
-.container-gran.index .contenidor-logotip h1::before {
+.main-index .contenidor-logotip h1::before {
     content: "";
     position: absolute;
     top: 0;
     left: 50%;
     transform: translateX(-50%);
-    width: 50px;
-    height: 50px;
+    width: 80px;
+    height: 80px;
     background-image: url("../img/isologo-white.svg");
     background-size: contain;
     background-repeat: no-repeat;
     background-position: center;
 }
 
-.container-gran.index h2 {
+.main-index h2 {
     font-weight: var(--font-weight-descobrir-i-subtitol-index);
-    font-size: 1.7rem;
+    margin-bottom: 0;
+    line-height: 1;
 }
 
 footer {
     width: 100%;
     text-align: center;
-    font-size: 0.5rem;
 }
 
 footer a {
@@ -252,7 +253,12 @@ footer a:hover {
 }
 
 .footer-index {
+    font-size: 0.8rem;
     color: var(--color-textos-sobre-fons-negre);    
+}
+
+.footer-index p {
+    margin: 0;
 }
 
 .footer-links {
@@ -275,8 +281,13 @@ footer a:hover {
 }
 
 .container-gran.footer-alternatiu-container {
-    padding-bottom:30px;
+    padding-bottom: 30px;
     text-align: left;
+    font-size: 0.8rem;
+}
+
+.container-gran.footer-alternatiu-container p {
+    margin-bottom: 5px;
 }
 
 a.enllaç-dins-text {
@@ -293,7 +304,6 @@ a.enllaç-dins-text {
 /* ----- ----- */
 .article-header {
     display: flex;
-    gap: 0.25rem;
     margin: 40px 0 20px 0;
 }
 
@@ -313,16 +323,39 @@ figure img {
     border-radius: 10px;
 }
 
-figcaption {
-    text-align: center;
-}
-
 .llista-categories-pare {
     list-style-type: square;
-    padding-left: 35px;
+    padding-left: 32px;
     gap: 50px;
 }
 
 .llista-categories-pare li {
     margin-bottom: 13px;
+}
+
+.llista-categories-fill {
+    padding-left: 32px;
+}
+
+.llista-categories-fill li {
+    list-style-type: circle;
+}
+
+.video-figure iframe {
+    width: 100%;
+    max-width: 857px;
+    aspect-ratio: 16 / 9; /* Manté la relació d'aspecte original */
+    display: block;
+    margin: 0 auto;
+    border: 0;
+    border-radius: 10px;
+}
+
+.penultim-paragraf {
+    margin-top: 30px;
+}
+
+.ultim-paragraf {
+    font-size: 0.75rem;
+    margin: 50px 0 60px 0;
 }
