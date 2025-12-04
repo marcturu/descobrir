@@ -42,14 +42,13 @@
             <form action="#" method="post">
                 <fieldset class="dues-columnes">
                     <legend>DADES PERSONALS</legend>
-
                         <div>
                             <label for="nom" class="requerit">Nom</label>
-                            <input type="text" id="nom" name="nom" required>
+                            <input type="text" id="nom" name="nom" required minlength="2" pattern="^[A-Za-zÀ-ÖØ-öø-ÿ\s'-]+$">
                         </div>
                         <div>
                             <label for="cognoms" class="requerit">Cognoms</label>
-                            <input type="text" id="cognoms" name="cognoms" required>
+                            <input type="text" id="cognoms" name="cognoms" required minlength="2" pattern="^[A-Za-zÀ-ÖØ-öø-ÿ\s'-]+$">
                         </div>
                         <div>
                             <label for="email" class="requerit">Correu electrònic</label>
@@ -57,21 +56,20 @@
                         </div>
                         <div>
                             <label for="telefon" class="requerit">Telèfon de contacte</label>
-                            <input type="tel" id="telefon" name="telefon" required>
+                            <input type="tel" id="telefon" name="telefon" required pattern="^(?:\+34\s?)?(?:6|7|8|9)(?:\s?\d){8}$">
                         </div>
                         <div>
-                            <label for="data" class="requerit">Data de neixement</label>
+                            <label for="data" class="requerit">Data de naixement</label>
                             <input type="date" id="data" name="data" required>
                         </div>
                         <div>
                             <label for="nacionalitat" class="requerit">Nacionalitat</label>
-                            <input type="text" id="nacionalitat" name="nacionalitat" required>
+                            <input type="text" id="nacionalitat" name="nacionalitat" required minlength="2" pattern="^[A-Za-zÀ-ÖØ-öø-ÿ\s\-']+$">
                         </div>
                 </fieldset>
 
                 <fieldset class="dues-columnes">
                     <legend>INFORMACIÓ SOBRE LA INSCRIPCIÓ</legend>
-
                         <div>
                             <label for="nivell" class="requerit">Nivell d’experiència culinària</label>
                             <select id="nivell" name="nivell" required> 
@@ -108,41 +106,41 @@
 
                 <fieldset>
                     <legend>PROPOSEU UN NOU TALLER</legend>
-                    
-                    <p>Si teniu alguna idea per a un nou taller, expliqueu-nos-la.</p>
+                        <p>Si teniu alguna idea per a un nou taller, expliqueu-nos-la.</p>
+                        <div>
+                            <label for="titol">Títol o tema del taller</label>
+                            <input type="text" id="titol" name="titol" maxlength="50" pattern="^[A-Za-zÀ-ÖØ-öø-ÿ0-9\s\-',\.]+$">
+                        </div>
+                        <div>
+                            <label for="descripcio">Descripció breu de la proposta</label>
+                            <textarea id="descripcio" name="descripcio" rows="7" maxlength="500" placeholder="Expliqueu què us agradaria aprendre o compartir en aquest taller..."></textarea>
+                        </div>
+                        <div>
+                            <label for="origen">País o regió d'origen</label>
+                            <input type="text" id="origen" name="origen" pattern="^[A-Za-zÀ-ÖØ-öø-ÿ\s\-']+$" placeholder="Exemple: Vietnam, Mediterrani, Argentina...">
+                        </div>
+                        <div>
+                            <label for="xef">Coneixeu algun xef o persona que podria impartir-lo?</label>
+                            <input type="text" id="xef" name="xef" pattern="^[A-Za-zÀ-ÖØ-öø-ÿ\s\-']+$">
+                        </div>
 
-                    <div>
-                        <label for="titol">Títol o tema del taller</label>
-                        <input type="text" id="titol" name="titol">
-                    </div>
-                    <div>
-                        <label for="descripcio">Descripció breu de la proposta</label>
-                        <textarea id="descripcio" name="descripcio" rows="7" placeholder="Expliqueu què us agradaria aprendre o compartir en aquest taller..."></textarea>
-                    </div>
-                    <div>
-                        <label for="origen">País o regió d'origen</label>
-                        <input type="text" id="origen" name="origen" placeholder="Exemple: Vietnam, Mediterrani, Argentina...">
-                    </div>
-                    <div>
-                        <label for="xef">Coneixeu algun xef o persona que podria impartir-lo?</label>
-                        <input type="text" id="xef" name="xef">
-                    </div>
-
-                    <div>
-                        Nivell de dificultat proposat
-                        <p>
-                            <input type="radio" name="nivell_proposat" id="nivell_proposat_1" value="iniciacio" />
-                            <label for="nivell_proposat_1">Iniciació</label>
-                        </p>
-                        <p>                           
-                            <input type="radio" name="nivell_proposat" id="nivell_proposat_2" value="intermedi" />
-                            <label for="nivell_proposat_2">Intermedi</label>
-                        </p>
-                        <p>
-                            <input type="radio" name="nivell_proposat" id="nivell_proposat_3" value="avançat" />
-                            <label for="nivell_proposat_3">Avançat</label>
-                        </p>
-                    </div>
+                        <div>
+                            <p class="radio-title">Nivell de dificultat proposat</p>
+                            <div class="radio-buttons">
+                                <p>
+                                    <input type="radio" name="nivell_proposat" id="nivell_proposat_1" value="iniciacio" />
+                                    <label for="nivell_proposat_1">Iniciació</label>
+                                </p>
+                                <p>                           
+                                    <input type="radio" name="nivell_proposat" id="nivell_proposat_2" value="intermedi" />
+                                    <label for="nivell_proposat_2">Intermedi</label>
+                                </p>
+                                <p>
+                                    <input type="radio" name="nivell_proposat" id="nivell_proposat_3" value="avançat" />
+                                    <label for="nivell_proposat_3">Avançat</label>
+                                </p>
+                            </div>
+                        </div>
                 </fieldset>
 
                 <p class="informacio-form">INFORMACIÓ SOBRE PROTECCIÓ DE DADES DE DESCOBRIR. 
@@ -151,8 +149,14 @@
                 <strong>Destinataris</strong>: no estan previstes cessions de dades a tercers, excepte per obligació legal.
                 <strong>Drets</strong>: podeu retirar el vostre consentiment en qualsevol moment, així com accedir, rectificar,
                 suprimir les vostres dades i altres drets dirigint-vos a info@descobrir.eu. 
-                <strong>Informació addicional</strong>: podeu ampliar la informació a l'enllaç d'
-                <a href="" class="enllaç-dins-text">Avís legal</a> i <a href="" class="enllaç-dins-text">Política de privacitat</a>.</p>
+                <strong>Informació addicional</strong>: podeu ampliar la informació a l'enllaç d'<a href="" class="enllaç-dins-text">Avís legal</a> i <a href="" class="enllaç-dins-text">Política de privacitat</a>.</p>
+                
+                <div class="checkbox-politica">
+                    <input type="checkbox" id="politica" name="politica" required>
+                    <label for="politica" class="requerit">He llegit i accepto la política de privacitat</label>
+                </div>
+
+                <button type="submit" class="boto-inscriume">Inscriu-me</button>
             </form>
         
         </div>

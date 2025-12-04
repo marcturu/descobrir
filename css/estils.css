@@ -68,6 +68,14 @@ h1, h2, h3, h4 {
     font-weight: var(--font-weight-textos-generals);
 }
 
+button,
+input,
+select,
+textarea {
+  font-family: inherit;
+  font-size: 100%;
+}
+
 figcaption {
     text-align: center;
     font-size: 0.85rem;
@@ -99,7 +107,6 @@ padding-left: 1rem;
 .container-gran, .container-petit  {
     font-size: 1.1rem;
     line-height: 1.5;
-    outline: 1px solid blue;
 }
 
 body {
@@ -285,6 +292,7 @@ footer a:hover {
 }
 
 .container-gran.footer-alternatiu-container {
+    padding-top: 0.5px;
     padding-bottom: 30px;
     text-align: left;
     font-size: 0.8rem;
@@ -485,6 +493,14 @@ input:focus, select:focus, textarea:focus {
     transition: box-shadow 0.25s ease;
 }
 
+input:required:invalid, select:required:invalid, textarea:required:invalid {
+    border: 1px solid #ff0000;
+}
+
+input:required:valid, select:required:valid, textarea:required:valid {
+    border: 1px solid #4caf50;
+}
+
 legend {
     margin-left: 20px;
     margin-bottom: 25px;
@@ -504,9 +520,54 @@ fieldset p {
 
 *::placeholder {
     font-style: italic;
-    font-family: "Noto Sans", sans-serif;
+}
+
+.radio-title {
+    margin-left: 0; 
+}
+
+.radio-buttons {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    margin-left: 20px; 
+}
+
+.radio-buttons p {
+    display: flex;
+    align-items: center;
+    gap: 5px; 
+    margin: 0;
+}
+
+fieldset div.radio-buttons p {
+    display: flex;
+    align-items: center;
+    gap: 5px; 
+    margin: 0;
 }
 
 .informacio-form {
-    font-size: 0.82em;
+    font-size: 0.81em;
+    margin-top: 40px;
+    margin-bottom: 5px;
+}
+
+.checkbox-politica {
+    display: flex;
+    align-items: center;
+    gap: 11px;
+    margin: 0;
+}
+
+.boto-inscriume {
+    background-color: var(--color-hover-ellaços-especials-i-boto-enviament);
+    font-size: 1.1rem;
+    padding: 7.5px;
+    margin-top: 5px;
+    border: none;
+}
+
+main.inscripcio {
+    margin-bottom: 90px;
 }
