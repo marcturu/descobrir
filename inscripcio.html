@@ -1,1 +1,171 @@
+<!DOCTYPE html>
+<html lang="ca">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Pàgina amb el formulari per inscriure's als tallers.">
+    <link rel="icon" type="image/png" href="img/favicon.png">
+    <title>Descobrir - Inscripcio</title>
+    <link rel="stylesheet" href="css/estils.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+</head>
 
+<body>
+    <header class="header-alternatiu">
+        <div class="container-gran header-alternatiu-container">
+            <a href="index.html" class="logo">descobrir</a>
+            <nav>
+                <ul>
+                    <li><a href="article-del-mes.html">Article del mes</a></li>
+                    <li><a href="tallers.html">Tallers</a></li>
+                    <li><a href="inscripcio.html" class="active">Inscripció</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main class="inscripcio">
+        <div class="container-petit">
+            <h1>Inscripció als tallers</h1>
+
+            <p class="introduccio">Ompliu el formulari següent per inscriure-us als nostres tallers. Les places són
+            limitades i es confirmaran per ordre d'inscripció. Un cop rebuda la sol·licitud, us
+            contactarem per correu electrònic per donar-vos tots els detalls del taller i les
+            instruccions de pagament.</p>
+        </div>
+
+        <div class="container-gran">
+            <p class="informacio-adicional">Els camps assenyalats amb <span class="asterisc">*</span> són obligatoris.</p> 
+        
+            <form action="#" method="post">
+                <fieldset class="dues-columnes">
+                    <legend>DADES PERSONALS</legend>
+
+                        <div>
+                            <label for="nom" class="requerit">Nom</label>
+                            <input type="text" id="nom" name="nom" required>
+                        </div>
+                        <div>
+                            <label for="cognoms" class="requerit">Cognoms</label>
+                            <input type="text" id="cognoms" name="cognoms" required>
+                        </div>
+                        <div>
+                            <label for="email" class="requerit">Correu electrònic</label>
+                            <input type="email" id="email" name="email" required>
+                        </div>
+                        <div>
+                            <label for="telefon" class="requerit">Telèfon de contacte</label>
+                            <input type="tel" id="telefon" name="telefon" required>
+                        </div>
+                        <div>
+                            <label for="data" class="requerit">Data de neixement</label>
+                            <input type="date" id="data" name="data" required>
+                        </div>
+                        <div>
+                            <label for="nacionalitat" class="requerit">Nacionalitat</label>
+                            <input type="text" id="nacionalitat" name="nacionalitat" required>
+                        </div>
+                </fieldset>
+
+                <fieldset class="dues-columnes">
+                    <legend>INFORMACIÓ SOBRE LA INSCRIPCIÓ</legend>
+
+                        <div>
+                            <label for="nivell" class="requerit">Nivell d’experiència culinària</label>
+                            <select id="nivell" name="nivell" required> 
+                                <option value="" disabled selected>Trieu el vostre nivell</option>
+                                <option value="principiant">Principiant</option>
+                                <option value="intermedi">Intermedi</option>
+                                <option value="avançat">Avançat</option>
+                            </select>
+                        </div>
+                        <div>
+                            <label for="idioma" class="requerit">Idioma preferit del taller</label>
+                            <select id="idioma" name="idioma" required> 
+                                <option value="" disabled selected>Trieu un idioma</option>
+                                <option value="catala">Català</option>
+                                <option value="castella">Castellà</option>
+                                <option value="angles">Anglès</option>
+                                <option value="indiferent">M’és indiferent</option>
+                            </select>
+                        </div>
+                        <div>
+                            <label for="taller" class="requerit">Seleccioneu un taller</label>
+                            <select id="taller" name="taller" required> 
+                                <option value="" disabled selected>Trieu un taller</option>
+                                <option value="ramen">Ramen d’hivern: brou i tècniques (03/12/2025)</option>
+                                <option value="mediterrania">Cuina de Nadal mediterrània (05/12/2025)</option>
+                                <option value="italianes">Receptes nadalenques italianes (07/12/2025)</option>
+                                <option value="orient-mitja">Tasts d'Orient Mitjà per a festes (10/12/2025)</option>
+                                <option value="dolços">Dolços per a les festes (12/12/2025)</option>
+                                <option value="nordica">Tradició nòrdica de Nadal (20/12/2025)</option>
+                                <option value="mexicana">Cuina festiva mexicana (27/12/2025)</option>
+                            </select>
+                        </div>
+                </fieldset>
+
+                <fieldset>
+                    <legend>PROPOSEU UN NOU TALLER</legend>
+                    
+                    <p>Si teniu alguna idea per a un nou taller, expliqueu-nos-la.</p>
+
+                    <div>
+                        <label for="titol">Títol o tema del taller</label>
+                        <input type="text" id="titol" name="titol">
+                    </div>
+                    <div>
+                        <label for="descripcio">Descripció breu de la proposta</label>
+                        <textarea id="descripcio" name="descripcio" rows="7" placeholder="Expliqueu què us agradaria aprendre o compartir en aquest taller..."></textarea>
+                    </div>
+                    <div>
+                        <label for="origen">País o regió d'origen</label>
+                        <input type="text" id="origen" name="origen" placeholder="Exemple: Vietnam, Mediterrani, Argentina...">
+                    </div>
+                    <div>
+                        <label for="xef">Coneixeu algun xef o persona que podria impartir-lo?</label>
+                        <input type="text" id="xef" name="xef">
+                    </div>
+
+                    <div>
+                        Nivell de dificultat proposat
+                        <p>
+                            <input type="radio" name="nivell_proposat" id="nivell_proposat_1" value="iniciacio" />
+                            <label for="nivell_proposat_1">Iniciació</label>
+                        </p>
+                        <p>                           
+                            <input type="radio" name="nivell_proposat" id="nivell_proposat_2" value="intermedi" />
+                            <label for="nivell_proposat_2">Intermedi</label>
+                        </p>
+                        <p>
+                            <input type="radio" name="nivell_proposat" id="nivell_proposat_3" value="avançat" />
+                            <label for="nivell_proposat_3">Avançat</label>
+                        </p>
+                    </div>
+                </fieldset>
+
+                <p class="informacio-form">INFORMACIÓ SOBRE PROTECCIÓ DE DADES DE DESCOBRIR. 
+                <strong>Finalitats</strong>: recollida de dades per a la inscripció als tallers de Descobrir. 
+                <strong>Legitimació</strong>: consentiment de l'interessat. 
+                <strong>Destinataris</strong>: no estan previstes cessions de dades a tercers, excepte per obligació legal.
+                <strong>Drets</strong>: podeu retirar el vostre consentiment en qualsevol moment, així com accedir, rectificar,
+                suprimir les vostres dades i altres drets dirigint-vos a info@descobrir.eu. 
+                <strong>Informació addicional</strong>: podeu ampliar la informació a l'enllaç d'
+                <a href="" class="enllaç-dins-text">Avís legal</a> i <a href="" class="enllaç-dins-text">Política de privacitat</a>.</p>
+            </form>
+        
+        </div>
+    </main>
+
+    <footer class="footer-alternatiu">
+        <div class="container-gran footer-alternatiu-container">
+            <p>UOC. Desembre de 2025. Marc Turu Roca</p>
+            <nav class="footer-links">
+                <a href="">Avís legal</a>
+                <a href="">Política de privacitat</a>
+                <a href="">Política de <i lang="en">cookies</i></a>
+            </nav>
+        </div>
+    </footer>
+</body>

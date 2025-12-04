@@ -41,7 +41,7 @@ abbr {
 
 h1 {
     font-size: 3rem;
-    margin: 40px 0 35px 0;
+    margin: 45px 0 30px 0;
 }
 
 h1.h1-article-del-mes {
@@ -99,7 +99,7 @@ padding-left: 1rem;
 .container-gran, .container-petit  {
     font-size: 1.1rem;
     line-height: 1.5;
-    border: 1px solid blue;
+    outline: 1px solid blue;
 }
 
 body {
@@ -305,7 +305,7 @@ a.enllaç-dins-text {
     text-decoration: underline solid;
 }
 
-/* ----- ----- */
+/* ----- article-del-mes.html ----- */
 .article-header {
     display: flex;
     margin: 40px 0 10px 0;
@@ -368,37 +368,64 @@ figure > iframe {
     display: block;
 }
 
-/* ----- ----- */
+/* ----- tallers.html ----- */
 table {
-    margin-left: auto;
-    margin-right: auto;
-    margin-bottom: 100px;
+    width: 100%;
+    margin: 50px auto 100px auto;
     border-collapse: collapse;
-    border: 1px solid var(--color-principal);
 }
 
 th.titol-taula {
     font-size: 2rem;
     text-align: center;
+    padding: 15px;
 }
 
 th {
+    position: relative;
     background-color: var(--color-fons-capçalera-taula-tallers);
     font-weight: var(--font-weight-cite-i-capçalera-taula-tallers);
     font-size: 1rem;
-    gap: 0.4rem;
-    padding: 10px 2.5px;
+    padding: 15px 32px;
 }
 
-th img {
-    width: 20px;
-    height: 20px;
-    vertical-align: middle;
-    margin-right: 5px;
+th::before {
+    content: "";
+    position: absolute;
+    left: 3px;
+    top: 15px;
+    width: 25px;
+    height: 25px;
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+
+.th-data::before {
+    background-image: url("../img/icon-calendar.svg");
+}
+
+.th-cuiner::before {
+    background-image: url("../img/icon-chef-hat.svg");
+}
+
+.th-pais::before {
+    background-image: url("../img/icon-country.svg");
+}
+
+.th-activitat::before {
+    background-image: url("../img/icon-recipe.svg");
+}
+
+.th-nivell::before {
+    background-image: url("../img/icon-level.svg");
+}
+
+.th-hora::before {
+    background-image: url("../img/icon-clock.svg");
 }
 
 td {
-    padding: 15px 5px;
+    padding: 15px 7.5px;
 }
 
 th,
@@ -408,5 +435,78 @@ td {
 }
 
 td.footer-taula {
-    font-size: 0.65rem;
+    font-size: 0.79rem;
+}
+
+/* ----- inscripcio.html ----- */
+.informacio-adicional {
+    font-size: 0.9rem;
+}
+
+.asterisc {
+    color: red;
+}
+
+fieldset {
+    border-radius: 10px;
+    border: 1px solid var(--color-principal);
+    margin-bottom: 25px;
+}
+
+fieldset.dues-columnes {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+}
+
+fieldset div {
+    display: flex;
+    flex-direction: column;
+    margin: 0 25px 25px 20px;
+    gap: 5px;
+}
+
+select {
+    background-color: transparent;
+}
+
+input, select {
+    height: 40px;
+}
+
+input, select, textarea {
+    border: 1px solid var(--color-principal);
+    padding: 7.5px 0 7.5px 7.5px;
+    font-size: 1.1rem;
+}
+
+input:focus, select:focus, textarea:focus {
+    outline: none;
+    box-shadow: 0 0 5px 4px var(--color-hover-ellaços-especials-i-boto-enviament);
+    transition: box-shadow 0.25s ease;
+}
+
+legend {
+    margin-left: 20px;
+    margin-bottom: 25px;
+    padding: 0 10px;
+    font-size: 1.3rem;
+}
+
+label.requerit::after {
+    content: " *";
+    color: red;
+}
+
+fieldset p {
+    margin-top: 0;
+    margin-left: 20px;
+}
+
+*::placeholder {
+    font-style: italic;
+    font-family: "Noto Sans", sans-serif;
+}
+
+.informacio-form {
+    font-size: 0.82em;
 }
