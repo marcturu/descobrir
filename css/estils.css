@@ -36,6 +36,7 @@ cite {
 
 
 abbr {
+    text-decoration: none;
     cursor: help;
 }
 
@@ -79,7 +80,7 @@ textarea {
 figcaption {
     text-align: center;
     font-size: 0.85rem;
-    margin-top: 5px;
+    margin: 5px 0 25px 0;
 }
 
 p {
@@ -107,6 +108,7 @@ padding-left: 1rem;
 .container-gran, .container-petit  {
     font-size: 1.1rem;
     line-height: 1.5;
+    outline: 1px solid blue;
 }
 
 body {
@@ -116,8 +118,8 @@ body {
     color: var(--color-principal);
 }
 
-/* Incorporació d'imatge de fons amb CSS */
-.container-gran.body-index {
+/* Incorporació d'imatge de fons amb CSS  y limitar barres desplaçament al index.html*/
+/*body.body-index {
     background-image: url("../img/home-bg.jpg");
     background-repeat: no-repeat;
     background-size: cover;
@@ -126,6 +128,19 @@ body {
     flex-direction: column;
     align-items: center;
     height: 100vh;
+    overflow: hidden;
+} */
+
+body.body-index {
+    background-image: url("../img/home-bg.jpg");
+    background-repeat: no-repeat;
+    background-size: cover; /* La imatge cobreix tot el viewport */
+    background-position: center top;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-height: 100vh;
+    overflow: hidden;
 }
 
 nav li {
@@ -144,8 +159,8 @@ header a:hover {
 
 .header-index {
     text-align: center;
-    padding: 13.5px 0 132px 0;
-    font-size: 1.2rem;
+    padding: clamp(1vh, 1vw, 1rem) 0 0 0;
+    font-size: clamp(1rem, 1.2vw, 1.2rem);
 }
 
 .header-index nav ul {
@@ -207,42 +222,73 @@ header a:hover {
     font-weight: var(--font-weight-textos-generals);
 }
 
-.main-index {
+/*.main-index {
     text-align: center;
     margin-bottom: 277px;
     color: var(--color-textos-sobre-fons-negre);
+} */
+
+.main-index {
+    text-align: center;
+    width: 100%;
+    box-sizing: border-box;
+    flex: 1;
+    padding-top: 14vh;
+    color: var(--color-textos-sobre-fons-negre);
+    position: relative;
+    
 }
 
 .main-index .contenidor-logotip {
     position: relative;
     display: inline-block;
+    width: 100%;
+    
 }
 
-.main-index .contenidor-logotip h1 {
+/* .main-index .contenidor-logotip h1 {
     position: relative;
     font-size: 9rem;
     padding-top: 80px;
     margin-bottom: 10px;
     line-height: 1;
     font-weight: var(--font-weight-descobrir-i-subtitol-index);
+} */
+
+.main-index h1 {
+    font-size: clamp(3rem, 9vw, 9rem);
+    margin: 5vh 0 1vh 0;
+    line-height: 1;
+    font-weight: var(--font-weight-descobrir-i-subtitol-index);
+    position: relative;
+    text-align: center;
+    display: inline-block;
 }
 
 /* "El nom del lloc web mostra en la seva part superior la imatge decorativa isologo-white.svg que ha d’incorporar-se mitjançant CSS." */
 .main-index .contenidor-logotip h1::before {
     content: "";
     position: absolute;
-    top: 0;
+    top: -0.5em;
     left: 50%;
     transform: translateX(-50%);
-    width: 80px;
-    height: 80px;
+    width: clamp(2rem, 4vw, 6rem);
+    height: auto;
+    aspect-ratio: 1/1;
     background-image: url("../img/isologo-white.svg");
     background-size: contain;
     background-repeat: no-repeat;
     background-position: center;
 }
 
+/*.main-index h2 {
+    font-weight: var(--font-weight-descobrir-i-subtitol-index);
+    margin-bottom: 0;
+    line-height: 1;
+} */
+
 .main-index h2 {
+    font-size: clamp(1.5rem, 4vw, 2.5rem);
     font-weight: var(--font-weight-descobrir-i-subtitol-index);
     margin-bottom: 0;
     line-height: 1;
@@ -263,9 +309,19 @@ footer a:hover {
    color: var(--color-hover-ellaços-especials-i-boto-enviament);
 }
 
-.footer-index {
+/*
+footer.footer-index {
     font-size: 0.8rem;
     color: var(--color-textos-sobre-fons-negre);    
+} */
+
+footer.footer-index {
+    width: 100%;
+    text-align: center;
+    box-sizing: border-box;
+    margin-bottom: 27vh;
+    font-size: 0.8rem;
+    color: var(--color-textos-sobre-fons-negre);
 }
 
 .footer-index p {
@@ -362,10 +418,6 @@ figure img {
     border-radius: 10px;
 }
 
-.penultim-paragraf {
-    margin-top: 30px;
-}
-
 .ultim-paragraf {
     font-size: 0.75rem;
     margin: 50px 0 60px 0;
@@ -459,6 +511,7 @@ fieldset {
     border-radius: 10px;
     border: 1px solid var(--color-principal);
     margin-bottom: 25px;
+    padding-bottom: 10px;
 }
 
 fieldset.dues-columnes {
@@ -485,6 +538,7 @@ input, select, textarea {
     border: 1px solid var(--color-principal);
     padding: 7.5px 0 7.5px 7.5px;
     font-size: 1.1rem;
+
 }
 
 input:focus, select:focus, textarea:focus {
@@ -523,28 +577,30 @@ fieldset p {
 }
 
 .radio-title {
-    margin-left: 0; 
+    margin: 10px;
+    font-size: 1.3rem;
 }
 
-.radio-buttons {
-    display: flex;
-    flex-direction: column;
-    gap: 5px;
-    margin-left: 20px; 
+.radio-buttons {    
+    margin: 0 0 10px 51px;
+    padding: 0;
+    list-style: none;
 }
 
-.radio-buttons p {
+.radio-option {
+    margin: 0;
+    padding: 0;
+}
+
+.radio-option label {
     display: flex;
     align-items: center;
-    gap: 5px; 
-    margin: 0;
+    gap:  13px;
 }
 
-fieldset div.radio-buttons p {
-    display: flex;
-    align-items: center;
-    gap: 5px; 
+.radio-option input {
     margin: 0;
+    padding: 0;
 }
 
 .informacio-form {

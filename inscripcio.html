@@ -37,7 +37,7 @@
         </div>
 
         <div class="container-gran">
-            <p class="informacio-adicional">Els camps assenyalats amb <span class="asterisc">*</span> són obligatoris.</p> 
+            <p class="informacio-adicional">Els camps assenyalats amb <abbr title="Asterisc d'obligatorietat"><span class="asterisc">*</span></abbr> són obligatoris.</p> 
         
             <form action="#" method="post">
                 <fieldset class="dues-columnes">
@@ -126,20 +126,26 @@
 
                         <div>
                             <p class="radio-title">Nivell de dificultat proposat</p>
-                            <div class="radio-buttons">
-                                <p>
-                                    <input type="radio" name="nivell_proposat" id="nivell_proposat_1" value="iniciacio" />
-                                    <label for="nivell_proposat_1">Iniciació</label>
-                                </p>
-                                <p>                           
-                                    <input type="radio" name="nivell_proposat" id="nivell_proposat_2" value="intermedi" />
-                                    <label for="nivell_proposat_2">Intermedi</label>
-                                </p>
-                                <p>
-                                    <input type="radio" name="nivell_proposat" id="nivell_proposat_3" value="avançat" />
-                                    <label for="nivell_proposat_3">Avançat</label>
-                                </p>
-                            </div>
+                                <ul class="radio-buttons">
+                                    <li class="radio-option">
+                                        <label for="nivell_proposat_1">
+                                        <input type="radio" id="nivell_proposat_1" name="nivell_proposat" value="iniciacio" />
+                                        Iniciació
+                                        </label>
+                                    </li>
+                                    <li class="radio-option">
+                                        <label for="nivell_proposat_2">
+                                        <input type="radio" id="nivell_proposat_2" name="nivell_proposat" value="intermedi" />
+                                        Intermedi
+                                        </label>
+                                    </li>
+                                    <li class="radio-option">
+                                        <label for="nivell_proposat_3">
+                                        <input type="radio" id="nivell_proposat_3" name="nivell_proposat" value="avançat" />
+                                        Avançat
+                                        </label>
+                                    </li>
+                                </ul>
                         </div>
                 </fieldset>
 
@@ -148,7 +154,12 @@
                 <strong>Legitimació</strong>: consentiment de l'interessat. 
                 <strong>Destinataris</strong>: no estan previstes cessions de dades a tercers, excepte per obligació legal.
                 <strong>Drets</strong>: podeu retirar el vostre consentiment en qualsevol moment, així com accedir, rectificar,
-                suprimir les vostres dades i altres drets dirigint-vos a info@descobrir.eu. 
+                suprimir les vostres dades i altres drets dirigint-vos a 
+                <a 
+                    href="mailto:info@descobrir.eu" 
+                    class="enllaç-dins-text"
+                >
+                    info@descobrir.eu</a>. 
                 <strong>Informació addicional</strong>: podeu ampliar la informació a l'enllaç d'<a href="" class="enllaç-dins-text">Avís legal</a> i <a href="" class="enllaç-dins-text">Política de privacitat</a>.</p>
                 
                 <div class="checkbox-politica">
