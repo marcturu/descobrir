@@ -1,4 +1,4 @@
-/* ----- Model de caiza alternatiu  ----- */
+/* ----- Model de caixa alternatiu  ----- */
 * {
     margin: 0;
     padding: 0;
@@ -12,8 +12,8 @@
 /* ----- Definició de la font Noto Sans de Google Fonts per tot el lloc web  ----- */
 html {
   font-family: "Noto Sans", sans-serif;
-  width: 100vw;
-  height: 100vh;
+  width: 100%;
+  height: 100%;
   box-sizing: border-box;
 }  
 
@@ -29,11 +29,10 @@ html {
     --font-weight-descobrir-i-subtitol-index: 900;
 }
 
-/* ----- Redefinició de propietats generals ja definides per HTML5 ----- */
+/* ----- Redefinició d'etiquetes generals ja definides per HTML5 ----- */
 cite {
     font-weight: var(--font-weight-cite-i-capçalera-taula-tallers);
 }
-
 
 abbr {
     text-decoration: none;
@@ -64,9 +63,12 @@ h4 {
     margin-right: 5px;
 }
 
-
 h1, h2, h3, h4 {
     font-weight: var(--font-weight-textos-generals);
+}
+
+p {
+    margin: 1rem 0;
 }
 
 button,
@@ -83,10 +85,7 @@ figcaption {
     margin: 5px 0 25px 0;
 }
 
-p {
-    margin: 1rem 0;
-}
-
+/* Container del contingut principal (gran) */
 .container-gran {
     width: 100%;
     max-width: 1140px;
@@ -96,6 +95,7 @@ p {
     padding-left: 1rem;
 }
 
+/* Container del contingut principal (petit) */
 .container-petit {
 width: 100%;
 max-width: 850px;
@@ -108,7 +108,6 @@ padding-left: 1rem;
 .container-gran, .container-petit  {
     font-size: 1.1rem;
     line-height: 1.5;
-    outline: 1px solid blue;
 }
 
 body {
@@ -118,19 +117,7 @@ body {
     color: var(--color-principal);
 }
 
-/* Incorporació d'imatge de fons amb CSS  y limitar barres desplaçament al index.html*/
-/*body.body-index {
-    background-image: url("../img/home-bg.jpg");
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position: top center;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    height: 100vh;
-    overflow: hidden;
-} */
-
+/* Incorporació d'imatge de fons amb CSS */
 body.body-index {
     background-image: url("../img/home-bg.jpg");
     background-repeat: no-repeat;
@@ -141,10 +128,6 @@ body.body-index {
     align-items: center;
     min-height: 100vh;
     overflow: hidden;
-}
-
-nav li {
-    margin: 2.5px;
 }
 
 header a {
@@ -222,18 +205,16 @@ header a:hover {
     font-weight: var(--font-weight-textos-generals);
 }
 
-/*.main-index {
-    text-align: center;
-    margin-bottom: 277px;
-    color: var(--color-textos-sobre-fons-negre);
-} */
+nav li {
+    margin: 2.5px;
+}
 
 .main-index {
     text-align: center;
     width: 100%;
     box-sizing: border-box;
     flex: 1;
-    padding-top: 14vh;
+    padding-top: 14.75vh;
     color: var(--color-textos-sobre-fons-negre);
     position: relative;
     
@@ -245,15 +226,6 @@ header a:hover {
     width: 100%;
     
 }
-
-/* .main-index .contenidor-logotip h1 {
-    position: relative;
-    font-size: 9rem;
-    padding-top: 80px;
-    margin-bottom: 10px;
-    line-height: 1;
-    font-weight: var(--font-weight-descobrir-i-subtitol-index);
-} */
 
 .main-index h1 {
     font-size: clamp(3rem, 9vw, 9rem);
@@ -269,7 +241,7 @@ header a:hover {
 .main-index .contenidor-logotip h1::before {
     content: "";
     position: absolute;
-    top: -0.5em;
+    top: -0.55em;
     left: 50%;
     transform: translateX(-50%);
     width: clamp(2rem, 4vw, 6rem);
@@ -280,12 +252,6 @@ header a:hover {
     background-repeat: no-repeat;
     background-position: center;
 }
-
-/*.main-index h2 {
-    font-weight: var(--font-weight-descobrir-i-subtitol-index);
-    margin-bottom: 0;
-    line-height: 1;
-} */
 
 .main-index h2 {
     font-size: clamp(1.5rem, 4vw, 2.5rem);
@@ -308,12 +274,6 @@ footer a {
 footer a:hover { 
    color: var(--color-hover-ellaços-especials-i-boto-enviament);
 }
-
-/*
-footer.footer-index {
-    font-size: 0.8rem;
-    color: var(--color-textos-sobre-fons-negre);    
-} */
 
 footer.footer-index {
     width: 100%;
@@ -369,7 +329,7 @@ a.enllaç-dins-text {
     text-decoration: underline solid;
 }
 
-/* ----- article-del-mes.html ----- */
+/* ----- Estils específics d'article-del-mes.html ----- */
 .article-header {
     display: flex;
     margin: 40px 0 10px 0;
@@ -402,11 +362,12 @@ figure img {
 }
 
 .llista-categories-fill {
-    padding-left: 32px;
+    padding-left: 30px;
 }
 
 .llista-categories-fill li {
     list-style-type: circle;
+    margin: 7.5px;
 }
 
 .video-figure iframe {
@@ -428,7 +389,7 @@ figure > iframe {
     display: block;
 }
 
-/* ----- tallers.html ----- */
+/* ----- Estils específics de tallers.html ----- */
 table {
     width: 100%;
     margin: 50px auto 100px auto;
@@ -498,9 +459,14 @@ td.footer-taula {
     font-size: 0.79rem;
 }
 
-/* ----- inscripcio.html ----- */
+/* ----- Estils específics d'inscripcio.html ----- */
+main.inscripcio {
+    margin-bottom: 90px;
+}
+
 .informacio-adicional {
     font-size: 0.9rem;
+    margin: 30px 0;
 }
 
 .asterisc {
@@ -524,6 +490,18 @@ fieldset div {
     flex-direction: column;
     margin: 0 25px 25px 20px;
     gap: 5px;
+}
+
+fieldset p {
+    margin-top: 0;
+    margin-left: 20px;
+}
+
+legend {
+    margin-left: 20px;
+    margin-bottom: 25px;
+    padding: 0 10px;
+    font-size: 1.3rem;
 }
 
 select {
@@ -555,21 +533,9 @@ input:required:valid, select:required:valid, textarea:required:valid {
     border: 1px solid #4caf50;
 }
 
-legend {
-    margin-left: 20px;
-    margin-bottom: 25px;
-    padding: 0 10px;
-    font-size: 1.3rem;
-}
-
 label.requerit::after {
     content: " *";
     color: red;
-}
-
-fieldset p {
-    margin-top: 0;
-    margin-left: 20px;
 }
 
 *::placeholder {
@@ -618,12 +584,10 @@ fieldset p {
 
 .boto-inscriume {
     background-color: var(--color-hover-ellaços-especials-i-boto-enviament);
+    color: var(--color-principal);
+    cursor: pointer;
     font-size: 1.1rem;
     padding: 7.5px;
     margin-top: 5px;
     border: none;
-}
-
-main.inscripcio {
-    margin-bottom: 90px;
 }
