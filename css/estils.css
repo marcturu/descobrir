@@ -102,7 +102,6 @@ figcaption {
 
     font-size: 1.1rem;
     line-height: 1.5;
-    outline: 1px solid blue;
 }
 
 /* Container del contingut principal (gran) */
@@ -231,6 +230,7 @@ a.enllaç-dins-text {
     transition: color 0.25s ease;
 }
 
+/* Quan l'usuari situï el ratolí a sobre de l'enllaç, la vora per sota del text canvia de l’estil dotted a estil solid. */
  a.enllaç-dins-text:hover {
     text-decoration: underline solid;
 }
@@ -368,7 +368,7 @@ figure img {
 }
 
 .llista-categories-fill {
-    padding-left: 30px;
+    padding-left: 28px;
 }
 
 .llista-categories-fill li {
@@ -398,7 +398,7 @@ figure > iframe {
 /* ----- Estils específics de tallers.html ----- */
 table {
     width: 100%;
-    margin: 70px auto 110px auto;
+    margin: 60px auto 110px auto;
     border-collapse: collapse;
 }
 
@@ -523,7 +523,7 @@ input, select, textarea {
 
 input:focus, select:focus, textarea:focus {
     outline: none;
-    box-shadow: 0 0 5px 4px var(--color-hover-ellaços-especials-i-boto-enviament);
+    box-shadow: 0 0 5px 1px var(--color-hover-ellaços-especials-i-boto-enviament);
     transition: box-shadow 0.25s ease;
 }
 
