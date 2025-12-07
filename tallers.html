@@ -6,13 +6,19 @@
     <meta name="description" content="Pàgina de programa de tallers amb diferents dates, cuiners, paisos, activitats, nivells i hores.">
     <link rel="icon" type="image/png" href="img/favicon.png">
     <title>Descobrir - Tallers</title>
+
+    <!-- Estils -->
     <link rel="stylesheet" href="css/estils.css">
+
+    <!-- Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
 </head>
 
 <body>
+
+    <!-- Header -->
     <header class="header-alternatiu">
         <div class="container-gran header-alternatiu-container">
             <a href="index.html" class="logo">descobrir</a>
@@ -26,7 +32,9 @@
         </div>
     </header>
 
+    <!-- Contenidor main -->
     <main>
+        <!-- Introducció -->
         <div class="container-petit">
             <h1>Tallers de desembre de 2025</h1>
 
@@ -36,6 +44,7 @@
             <a href="inscripcio.html" class="enllaç-dins-text">Inscriviu-vos</a>.</p>
         </div>
 
+        <!-- Taula -->
         <div class="container-gran">
             <figure>
                 <table class="taula-tallers">
@@ -44,12 +53,12 @@
                             <th colspan="6" class="titol-taula">Relació de tallers</th>
                         </tr>
                         <tr>
-                            <th class="th-data">DATA</th>
-                            <th class="th-cuiner">CUINER/A</th>
-                            <th class="th-pais">PAÍS</th>
-                            <th class="th-activitat">ACTIVITAT</th>
-                            <th class="th-nivell">NIVELL</th>
-                            <th class="th-hora">HORA</th>
+                            <th scope="col" class="th-data">DATA</th>
+                            <th scope="col" class="th-cuiner">CUINER/A</th>
+                            <th scope="col" class="th-pais">PAÍS</th>
+                            <th scope="col" class="th-activitat">ACTIVITAT</th>
+                            <th scope="col" class="th-nivell">NIVELL</th>
+                            <th scope="col" class="th-hora">HORA</th>
                         </tr>
                     </thead>
                     <tbody>
@@ -65,7 +74,7 @@
                             <td>5 desembre 2025</td>
                             <td>Carla Ribas</td>
                             <td>Espanya</td>
-                            <td>Cuina de Nadal mediterrània</t>
+                            <td>Cuina de Nadal mediterrània</td>
                             <td>Avançat</td>
                             <td>17:30 <abbr title="Hora local">h</abbr></td>
                         </tr>
@@ -103,7 +112,7 @@
                         </tr>
                         <tr>
                             <td>27 desembre 2025</td>
-                            <td>Carlos Méndez</t>
+                            <td>Carlos Méndez</td>
                             <td>Mèxic</td>
                             <td>Cuina festiva mexicana</td>
                             <td>Iniciació</td>
@@ -112,8 +121,8 @@
                     </tbody>
                     <tfoot>
                         <tr>
-                            <td colspan="6" class="footer-taula">Les activitats tenen places limitades i requereixen inscripció prèvia. Cada taller
-                            inclou degustació i material de suport.</td>
+                            <td colspan="6" class="footer-taula">Les activitats tenen places limitades i requereixen inscripció prèvia.
+                            Cada taller inclou degustació i material de suport.</td>
                         </tr>
                     </tfoot>
                 </table>
@@ -121,13 +130,19 @@
         </div>
     </main>
 
+    <!-- Footer -->
     <footer class="footer-alternatiu">
         <div class="container-gran footer-alternatiu-container">
-            <p>UOC. Desembre de 2025. Marc Turu Roca</p>
+            <p>
+                <a href="https://www.uoc.edu/" class="no-icon" target="_blank"> <abbr title="Universitat Oberta de Catalunya">UOC</abbr></a>.
+                Desembre de 2025. Marc Turu Roca
+            </p>
             <nav class="footer-links">
-                <a href="">Avís legal</a>
-                <a href="">Política de privacitat</a>
-                <a href="">Política de <i lang="en">cookies</i></a>
+                <ul>
+                    <li><a href="#">Avís legal</a></li>
+                    <li><a href="#">Política de privacitat</a></li>
+                    <li><a href="#">Política de <i lang="en">cookies</i></a></li>
+                </ul>
             </nav>
         </div>
     </footer>

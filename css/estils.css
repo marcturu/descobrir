@@ -1,4 +1,4 @@
-/* ----- Model de caixa alternatiu  ----- */
+/* ----- Reset i configuracions globals  ----- */
 * {
     margin: 0;
     padding: 0;
@@ -9,7 +9,7 @@
     box-sizing: border-box;
 }
 
-/* ----- Definició de la font Noto Sans de Google Fonts per tot el lloc web  ----- */
+/* Definició de la font Noto Sans de Google Fonts per tot el lloc web  */
 html {
   font-family: "Noto Sans", sans-serif;
   width: 100%;
@@ -17,7 +17,7 @@ html {
   box-sizing: border-box;
 }  
 
-/* ----- Custom properties per les variables (amb noms descriptius en comptes de colors) ----- */
+/* Custom properties per les variables (amb noms descriptius en comptes de colors) */
 :root {
     --color-principal: rgb(23 23 23);
     --color-hover-ellaços-especials-i-boto-enviament: rgb(218 245 9);
@@ -30,6 +30,21 @@ html {
 }
 
 /* ----- Redefinició d'etiquetes generals ja definides per HTML5 ----- */
+body {
+    margin: 0;
+    padding: 0;
+    font-weight: var(--font-weight-textos-generals);
+    color: var(--color-principal);
+}
+
+button,
+input,
+select,
+textarea {
+  font-family: inherit;
+  font-size: 100%;
+}
+
 cite {
     font-weight: var(--font-weight-cite-i-capçalera-taula-tallers);
 }
@@ -37,6 +52,10 @@ cite {
 abbr {
     text-decoration: none;
     cursor: help;
+}
+
+h1, h2, h3, h4 {
+    font-weight: var(--font-weight-textos-generals);
 }
 
 h1 {
@@ -63,20 +82,8 @@ h4 {
     margin-right: 5px;
 }
 
-h1, h2, h3, h4 {
-    font-weight: var(--font-weight-textos-generals);
-}
-
 p {
     margin: 1rem 0;
-}
-
-button,
-input,
-select,
-textarea {
-  font-family: inherit;
-  font-size: 100%;
 }
 
 figcaption {
@@ -85,49 +92,27 @@ figcaption {
     margin: 5px 0 25px 0;
 }
 
-/* Container del contingut principal (gran) */
-.container-gran {
+/* ----- Contenidors i estils comuns (ja siguin dels 4 arxius o dels 3 - index.html ----- */
+.container-gran, .container-petit  {
     width: 100%;
-    max-width: 1140px;
     margin-right: auto;
     margin-left: auto;
     padding-right: 1rem;
     padding-left: 1rem;
+
+    font-size: 1.1rem;
+    line-height: 1.5;
+    outline: 1px solid blue;
+}
+
+/* Container del contingut principal (gran) */
+.container-gran {
+    max-width: 1140px;
 }
 
 /* Container del contingut principal (petit) */
 .container-petit {
-width: 100%;
-max-width: 850px;
-margin-right: auto;
-margin-left: auto;
-padding-right: 1rem;
-padding-left: 1rem;
-}
-
-.container-gran, .container-petit  {
-    font-size: 1.1rem;
-    line-height: 1.5;
-}
-
-body {
-    margin: 0;
-    padding: 0;
-    font-weight: var(--font-weight-textos-generals);
-    color: var(--color-principal);
-}
-
-/* Incorporació d'imatge de fons amb CSS */
-body.body-index {
-    background-image: url("../img/home-bg.jpg");
-    background-repeat: no-repeat;
-    background-size: cover; /* La imatge cobreix tot el viewport */
-    background-position: center top;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    min-height: 100vh;
-    overflow: hidden;
+    max-width: 850px;
 }
 
 header a {
@@ -138,21 +123,6 @@ header a {
 
 header a:hover {
     color: var(--color-hover-ellaços-especials-i-boto-enviament);
-}
-
-.header-index {
-    text-align: center;
-    padding: clamp(1vh, 1vw, 1rem) 0 0 0;
-    font-size: clamp(1rem, 1.2vw, 1.2rem);
-}
-
-.header-index nav ul {
-    list-style-type: none;
-    margin: 0;
-    padding: 0;
-    display: flex;
-    justify-content: center;
-    gap: 43px;
 }
 
 .header-alternatiu {
@@ -205,8 +175,97 @@ header a:hover {
     font-weight: var(--font-weight-textos-generals);
 }
 
+footer {
+    width: 100%;
+    text-align: center;
+}
+
+footer a {
+    color: var(--color-textos-sobre-fons-negre);
+    text-decoration: none;
+    cursor: pointer;
+}
+
+footer a:hover { 
+   color: var(--color-hover-ellaços-especials-i-boto-enviament);
+}
+
+footer .footer-links ul {
+    display: flex;
+    align-items: center;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    gap: 0;
+}
+
+.footer-links ul li a {
+    display: inline-block;
+}
+
+.footer-links ul li:not(:last-child)::after {
+    content: "·";
+    margin: 0 8px;
+}
+
+.footer-alternatiu {
+    background-color: var(--color-principal);
+    color: var(--color-textos-sobre-fons-negre);
+}
+
+.container-gran.footer-alternatiu-container {
+    padding-top: 0.5px;
+    padding-bottom: 30px;
+    text-align: left;
+    font-size: 0.8rem;
+}
+
+.container-gran.footer-alternatiu-container p {
+    margin-bottom: 5px;
+}
+
+a.enllaç-dins-text {
+    color: var(--color-principal);
+    text-decoration: underline dotted;
+    text-underline-offset: 5px;
+    transition: color 0.25s ease;
+}
+
+ a.enllaç-dins-text:hover {
+    text-decoration: underline solid;
+}
+
 nav li {
     margin: 2.5px;
+}
+
+/* ----- Estils específics d'index.html ----- */
+/* Incorporació d'imatge de fons amb CSS */
+body.body-index {
+    background-image: url("../img/home-bg.jpg");
+    background-repeat: no-repeat;
+    background-size: cover; /* La imatge cobreix tot el viewport */
+    background-position: center top;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-height: 100vh;
+    overflow: hidden;
+}
+
+.header-index {
+    text-align: center;
+    padding: clamp(1vh, 1vw, 1rem) 0 0 0;
+    font-size: clamp(1rem, 1.2vw, 1.2rem);
+}
+
+.header-index nav ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    gap: clamp(1.5rem, 2.5vw, 2.6875rem);
 }
 
 .main-index {
@@ -260,73 +319,21 @@ nav li {
     line-height: 1;
 }
 
-footer {
-    width: 100%;
-    text-align: center;
-}
-
-footer a {
-    color: var(--color-textos-sobre-fons-negre);
-    text-decoration: none;
-    cursor: pointer;
-}
-
-footer a:hover { 
-   color: var(--color-hover-ellaços-especials-i-boto-enviament);
-}
-
-footer.footer-index {
+.footer-index {
     width: 100%;
     text-align: center;
     box-sizing: border-box;
-    margin-bottom: 27vh;
+    margin-bottom: 26.75vh;
     font-size: 0.8rem;
     color: var(--color-textos-sobre-fons-negre);
+}
+
+.footer-index .footer-links ul {
+    justify-content: center;
 }
 
 .footer-index p {
     margin: 0;
-}
-
-.footer-links {
-    display: inline;
-}
-
-.footer-links a::after {
-    content: " · ";
-    margin: 0 7.5px;
-}
-
-/* Eliminar el tercer " · " */
-.footer-links a:last-child::after {
-    content: "";
-}
-
-.footer-alternatiu {
-    background-color: var(--color-principal);
-    color: var(--color-textos-sobre-fons-negre);
-}
-
-.container-gran.footer-alternatiu-container {
-    padding-top: 0.5px;
-    padding-bottom: 30px;
-    text-align: left;
-    font-size: 0.8rem;
-}
-
-.container-gran.footer-alternatiu-container p {
-    margin-bottom: 5px;
-}
-
-a.enllaç-dins-text {
-    color: var(--color-principal);
-    text-decoration: underline dotted;
-    text-underline-offset: 5px;
-    transition: color 0.25s ease;
-}
-
- a.enllaç-dins-text:hover {
-    text-decoration: underline solid;
 }
 
 /* ----- Estils específics d'article-del-mes.html ----- */
@@ -354,7 +361,6 @@ figure img {
 .llista-categories-pare {
     list-style-type: square;
     padding-left: 32px;
-    gap: 50px;
 }
 
 .llista-categories-pare li {
@@ -392,14 +398,14 @@ figure > iframe {
 /* ----- Estils específics de tallers.html ----- */
 table {
     width: 100%;
-    margin: 50px auto 100px auto;
+    margin: 70px auto 110px auto;
     border-collapse: collapse;
 }
 
-th.titol-taula {
-    font-size: 2rem;
-    text-align: center;
-    padding: 15px;
+th,
+td {
+  border: 1px solid var(--color-principal);
+  text-align: left;
 }
 
 th {
@@ -407,7 +413,13 @@ th {
     background-color: var(--color-fons-capçalera-taula-tallers);
     font-weight: var(--font-weight-cite-i-capçalera-taula-tallers);
     font-size: 1rem;
-    padding: 15px 32px;
+    padding: 15px 10px 15px 30px;
+}
+
+th.titol-taula {
+    font-size: 2rem;
+    text-align: center;
+    padding: 15px;
 }
 
 th::before {
@@ -449,24 +461,14 @@ td {
     padding: 15px 7.5px;
 }
 
-th,
-td {
-  border: 1px solid var(--color-principal);
-  text-align: left;
-}
-
 td.footer-taula {
-    font-size: 0.79rem;
+    font-size: 0.8rem;
 }
 
 /* ----- Estils específics d'inscripcio.html ----- */
-main.inscripcio {
-    margin-bottom: 90px;
-}
-
 .informacio-adicional {
     font-size: 0.9rem;
-    margin: 30px 0;
+    margin: 30px 0 20px 0;
 }
 
 .asterisc {
@@ -525,17 +527,17 @@ input:focus, select:focus, textarea:focus {
     transition: box-shadow 0.25s ease;
 }
 
-input:required:invalid, select:required:invalid, textarea:required:invalid {
-    border: 1px solid #ff0000;
+input:required:user-invalid, select:required:user-invalid, textarea:required:user-invalid {
+    border: 1.5px solid #ff0000;
 }
 
-input:required:valid, select:required:valid, textarea:required:valid {
-    border: 1px solid #4caf50;
+input:required:user-valid, select:required:user-valid, textarea:required:user-valid {
+    border: 1.5px solid #4caf50;
 }
 
 label.requerit::after {
     content: " *";
-    color: red;
+    color: #ff0000;
 }
 
 *::placeholder {
@@ -548,23 +550,15 @@ label.requerit::after {
 }
 
 .radio-buttons {    
-    margin: 0 0 10px 51px;
+    margin: 0 0 15px 51px;
     padding: 0;
     list-style: none;
 }
 
 .radio-option {
-    margin: 0;
-    padding: 0;
-}
-
-.radio-option label {
     display: flex;
     align-items: center;
-    gap:  13px;
-}
-
-.radio-option input {
+    gap: 13px;
     margin: 0;
     padding: 0;
 }
@@ -589,5 +583,6 @@ label.requerit::after {
     font-size: 1.1rem;
     padding: 7.5px;
     margin-top: 5px;
+    margin-bottom: 90px;
     border: none;
 }
