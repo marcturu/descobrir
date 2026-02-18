@@ -81,10 +81,10 @@ All additional documentation is in the `/DOCS` directory:
 ![Article(Mobile)](screenshots/Mobile_article.png)
 
 ### Inscripció input (1)
-![InscripcióInput(1)](screenshots/inscripcio_input(1).png)
+![InscripcióInput(1)](screenshots/inscripcio_input(1).jpg)
 
 ### Inscripció input (2)
-![InscripcioInput(2)](screenshots/inscripcio_input(2).png)
+![InscripcioInput(2)](screenshots/inscripcio_input(1).jpg)
 
 ---
 
