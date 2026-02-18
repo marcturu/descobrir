@@ -27,7 +27,6 @@ The goal of this project was to reinforce and solidify concepts from **Web Fonts
 ### 1. Clone the repository
 ```bash
 git clone https://github.com/marcturu/descobrir.git
-cd descobrir
 ```
 
 ### 2. Try the webpage locally
