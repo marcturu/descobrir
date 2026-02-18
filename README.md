@@ -1,5 +1,4 @@
-
-# <img src="img/logo.svg" alt=Descobrir" width="150"/> — Gastronomic portal
+# <img src="img/favicon.png" alt="Descobrir" width="75"/> — Gastronomic portal
 
 <sub>🗓️ Developed in December 2025</sub>
 
