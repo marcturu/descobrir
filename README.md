@@ -18,7 +18,7 @@ The goal of this project was to reinforce and solidify concepts from **Web Fonts
 - **Semantic inline elements** including `<cite>`, `<abbr>`, `<em>`, and `<strong>`.
 - **Multimedia and embedded content**, including images and video embedded via `<figure>`, `<figcaption>`, `<img>`, and `<iframe>`.
 - **CSS styling and custom properties**: Use of `:root` variables, reset rules, element redefinitions, responsive techniques (`aspect-ratio`, `clamp`, `vw`, `vh`, `rem`, `%`), hover/focus states, and smooth transitions.
-- **Accessibility and validation**: Pages validated with W3C tools and structured following semantic and accessibility best practices (ARIA usage, proper label association, structured fieldsets).
+- **Accessibility and validation**: All HTML files validated with [W3C Validator](https://validator.w3.org/) and CSS validated with [W3C CSS Validator](https://jigsaw.w3.org/css-validator/) — no errors or warnings found across all pages.
 
 ---
 
