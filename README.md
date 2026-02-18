@@ -83,7 +83,7 @@ All additional documentation is in the `/DOCS` directory:
 ![InscripcióInput(1)](screenshots/inscripcio_input(1).jpg)
 
 ### Inscripció input (2)
-![InscripcioInput(2)](screenshots/inscripcio_input(1).jpg)
+![InscripcioInput(2)](screenshots/inscripcio_input(2).jpg)
 
 ---
 
