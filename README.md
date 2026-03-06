@@ -1,6 +1,6 @@
 # <img src="img/favicon.png" alt="Descobrir" width="75"/> — Gastronomic portal
 
-<sub>🗓️ Developed in December 2025</sub>
+<sub>🗓️ Developed in November 2025</sub>
 
 This project is a **structured and semantic gastronomic portal developed with HTML5 & CSS3**, composed of four pages: `index.html`, `article-del-mes.html`, `tallers.html`, and `inscripcio.html`, along with additional assets such as CSS stylesheets in `/css` and images in `/img`.  
 The goal of this project was to reinforce and solidify concepts from **Web Fonts, Tables, Forms, and Advanced CSS Styling**, presenting well-organized HTML documents using semantic elements, structured forms, accessible components, and consistent styling.
