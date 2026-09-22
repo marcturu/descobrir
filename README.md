@@ -83,12 +83,3 @@ All additional documentation is in the `/DOCS` directory:
 
 ### Inscripció input (2)
 ![InscripcioInput(2)](screenshots/inscripcio_input(2).jpg)
-
----
-
-## ⚖️ Copyright & License
-
-© 2025 Marc Turu Roca. All rights reserved.
-
-This project and its contents are the exclusive intellectual property of Marc Turu Roca.  
-All rights reserved. No part of this project may be copied, modified, distributed, or used without prior written permission from the author.
